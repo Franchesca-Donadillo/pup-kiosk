@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PUP Vicinity Map Interaction</title>
+		<style>
+			/* Style for the highlight effect */
+			.highlight {
+				border: 3px solid red;
+			}
+
+			/* Style for info box */
+			#info-box {
+				position: absolute;
+				bottom: 0px;
+				background-color: white;
+				padding: 10px;
+				border: 3px solid black;
+				display: none;
+				width: 250px;
+				height:250px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Interactive PUP Vicinity Map</h1>
+
+		<!-- Image map-->
+		<img src="pup-map.jpg" alt="PUP Vicinity Map" usemap="#pup-map" id="pup-map-img" style="width: 100vw;height: 90vh;">
+
+		<map name="pup-map">
+			<!--1-->
+			<area shape="rect" coords="1035,565,1109,578" href="#" alt="PUP Pylon" title="PUP Pylon" id = ""
+				  onmouseover="showInfo('Area 1: The Pylon originally stood for the true, the good and the beautiful.'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--2-->
+			<area shape="circle" coords="1030,602,12" href="#" alt="The Mural" title="The Mural"
+				  onmouseover="showInfo('The Mural: The Mural. The sculpture (Cut and welded brass mural relief, 2.5 x 9.3 meters) was built by national artist Eduardo Castrillo † in 1974. '); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--3-->
+			<area shape="rect" coords="1020,522,1059,554" href="#" alt="Vistor's Lounge" title="Vistor's Lounge"
+				  onmouseover="showInfo('Visitor\'s Lounge'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--4-->
+			<area shape="rect" coords="1078,507,1096,526" href="#" alt="Open Court" title="Open Court"
+				  onmouseover="showInfo('Open Court'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--5-->
+			<area shape="rect" coords="991,459,1007,481" href="#" alt="Lawn Tennis Court" title="Lawn Tennis Court"
+				  onmouseover="showInfo('Lawn Tennis Court'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--6-->
+			<area shape="rect" coords="902,398,918,427" href="#" alt="Basketball Court" title="Basketball Court"
+				  onmouseover="showInfo('Basketball Court'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--7-->
+			<area shape="rect" coords="798,459,807,485" href="#" alt="Souvenir Shop" title="Souvenir Shop"
+				  onmouseover="showInfo('Souvenir Shop'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--8-->
+			<area shape="rect" coords="709,416,720,444" href="#" alt="Mabini Shrine" title="Mabini Shrine"
+				  onmouseover="showInfo('Mabini Shrine: '); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--9-->
+			<area shape="rect" coords="640,415,650,454" href="#" alt="Mabini Museum" title="Mabini Museum"
+				  onmouseover="showInfo('Mabini Museum: '); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--10-->
+			<area shape="rect" coords="744,374,755,400" href="#" alt="Obelisk" title="Obelisk"
+				  onmouseover="showInfo('Obelisk'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--11-->
+			<area shape="rect" coords="587,400,596,426" href="#" alt="Freedom Park" title="Freedom Park"
+				  onmouseover="showInfo('Freedom Park: '); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--12-->
+			<area shape="rect" coords="490,431,505,459" href="#" alt="Fountain Park" title="Fountain Park"
+				  onmouseover="showInfo('Fountain Park: '); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--13-->
+			<area shape="rect" coords="316,441,333,463" href="#" alt="Inter-Faith Chapel" title="Inter-Faith Chapel"
+				  onmouseover="showInfo('Inter-Faith Chapel'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--14-->
+			<area shape="rect" coords="333,301,344,327" href="#" alt="Main Academic Building" title="Main Academic Building"
+				  onmouseover="showInfo('Main Academic Building'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--15-->
+			<area shape="rect" coords="77,362,99,394" href="#" alt="Gazebo" title="Gazebo"
+				  onmouseover="showInfo('Gazebo: '); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			
+			<!-- Add more areas based on the map coordinates -->
+		</map>
+
+		<!-- Information Box -->
+		<div id="info-box"></div>
+
+		<script>
+			// Show information when hovering over an area
+			function showInfo(text) {
+				const infoBox = document.getElementById('info-box');
+				infoBox.style.display = 'block';
+				infoBox.innerHTML = text;
+			}
+
+			// Hide the information when the mouse leaves
+			function hideInfo() {
+				const infoBox = document.getElementById('info-box');
+				infoBox.style.display = 'none';
+			}
+
+			// Highlight an area when the mouse hovers over it
+			function highlightArea(area) {
+				area.classList.add('highlight');
+			}
+
+			// Remove the highlight when the mouse leaves
+			function removeHighlight(area) {
+				area.classList.remove('highlight');
+			}
+			
+			//added
+			function scaleImageMap() {
+				var img = document.getElementById("pup-map-img");
+				var widthRatio = img.clientWidth / img.naturalWidth;
+				var heightRatio = img.clientHeight / img.naturalHeight;
+
+				var areas = document.querySelectorAll("map[name='pup-map'] area");
+				areas.forEach(function (area) {
+					var coords = area.dataset.originalCoords.split(",");
+					var scaledCoords = coords.map((c, i) => 
+						i % 2 === 0 ? Math.round(c * widthRatio) : Math.round(c * heightRatio)
+					);
+					area.coords = scaledCoords.join(",");
+				});
+			}
+
+			document.addEventListener("DOMContentLoaded", function () {
+				var areas = document.querySelectorAll("map[name='pup-map'] area");
+				areas.forEach(function (area) {
+					area.dataset.originalCoords = area.coords; // Store original coordinates
+				});
+
+				scaleImageMap();
+				window.addEventListener("resize", scaleImageMap);
+			});
+	
+		</script>
+	</body>
+</html>
