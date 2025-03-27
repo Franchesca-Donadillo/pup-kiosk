@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<head  style="color: maroon;">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>PUP Vicinity Map Interaction</title>
+
 		<style>
 			/* Style for the highlight effect */
 			.highlight {
@@ -17,10 +18,14 @@
 				bottom: 4px;
 				background-color: white;
 				padding: 10px;
+				background-image: url('background.png');
+				background-size: cover;
 				border: 3px solid black;
 				display: none;
 				width: 18vw;
 				height:32vh;
+				white-space: pre-line;
+			
 			}
 
 		</style>
@@ -34,83 +39,83 @@
 		<map name="pup-map">
 			<!--1/-->
 			<area shape="rect" coords="1083,566,1106,598" href="#" alt="PUP Pylon" title="PUP Pylon" 
-				  onmouseover="showInfo('Area 1: The Pylon originally stood for the true, the good and the beautiful.', 'pylon.jpg') ;highlightArea(this);" 
+				  onmouseover="showInfo('Area 1: The Pylon.\n\n Originally stood for the true, the good and the beautiful.', 'pylon.jpg') ;highlightArea(this);" 
 				  onmouseout="hideInfo(); hideImage(); removeHighlight(this);">
 			<!--2-->
 			<area shape="rect" coords="1015,585,1038,612" href="#" alt="The Mural" title="The Mural"
-				  onmouseover="showInfo('The Mural: The Mural. The sculpture (Cut and welded brass mural relief, 2.5 x 9.3 meters) was built by national artist Eduardo Castrillo † in 1974. ', 'mural.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 2: The Mural.\n\n The sculpture (Cut and welded brass mural relief, 2.5 x 9.3 meters) was built by national artist Eduardo Castrillo † in 1974. ', 'mural.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--5-->
 			<area shape="rect" coords="991,459,1007,481" href="#" alt="Lawn Tennis Court" title="Lawn Tennis Court"
-				  onmouseover="showInfo('Lawn Tennis Court', 'open-court.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 5: Lawn Tennis Court.\n\n An outdoor facility for training and competitions, promoting sports and wellness among students.', 'open-court.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--7-->
 			<area shape="rect" coords="798,459,807,485" href="#" alt="Souvenir Shop" title="Souvenir Shop"
-				  onmouseover="showInfo('Souvenir Shop','souvenir-shop.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 7: Souvenir Shop.\n\nOffers a variety of university-themed merchandise, promoting school pride among students and visitors.','souvenir-shop.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--8-->
 			<area shape="rect" coords="709,416,720,444" href="#" alt="Mabini Shrine" title="Mabini Shrine"
-				  onmouseover="showInfo('Mabini Shrine: ', 'mabini-shrine.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 8: Mabini Shrine.\n\nA historical site honoring Apolinario Mabini, showcasing his life, works, and contributions to Philippine independence.', 'mabini-shrine.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--9-->
 			<area shape="rect" coords="640,415,650,454" href="#" alt="Mabini Museum" title="Mabini Museum"
-				  onmouseover="showInfo('Mabini Museum: ', 'museo-mabini.png'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 9: Mabini Museum.\n\nPreserves the legacy of Apolinario Mabini through exhibits of his life, works, and contributions to Philippine history. ', 'museo-mabini.png'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--10-->
 			<area shape="rect" coords="744,374,755,400" href="#" alt="Obelisk" title="Obelisk"
-				  onmouseover="showInfo('Obelisk','obelisk.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 10: Obelisk.\n\nStands as a symbol of the university\'s resilience, excellence, and commitment to serving the nation.','obelisk.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--11-->
 			<area shape="rect" coords="587,400,596,426" href="#" alt="Freedom Park" title="Freedom Park"
-				  onmouseover="showInfo('Freedom Park: ', 'freedom park.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 11: Freedom Park.\n\nA vibrant space for student events, and advocacy, symbolizing academic freedom and expression. ', 'freedom park.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--12-->
 			<area shape="rect" coords="490,431,505,459" href="#" alt="Fountain Park" title="Fountain Park"
-				  onmouseover="showInfo('Fountain Park: ', 'fountain-park.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 12: Fountain Park.\n\nA serene space for relaxation and socialization, ', 'fountain-park.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--13-->
 			<area shape="rect" coords="316,441,333,463" href="#" alt="Inter-Faith Chapel" title="Inter-Faith Chapel"
-				  onmouseover="showInfo('Inter-Faith Chapel', 'inter-faith-chapel.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 13: Inter-Faith Chapel.\n\nA sacred space for prayer, reflection, and diverse religious gatherings.', 'inter-faith-chapel.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--14-->
 			<area shape="rect" coords="333,301,344,327" href="#" alt="Main Academic Building" title="Main Academic Building"
-				  onmouseover="showInfo('Main Academic Building', 'main-acad-building.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 14: Main Academic Building.\n\nHouses classrooms, offices, and facilities, serving as the university\'s central hub for learning and administration.', 'main-acad-building.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--15-->
 			<area shape="rect" coords="77,362,99,394" href="#" alt="Gazebo" title="Gazebo"
-				  onmouseover="showInfo('Gazebo: ', 'gazebo.png'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 15: Gazebo.\n\nA cozy spot for relaxation, study, and social gatherings.', 'gazebo.png'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--15-->
 			<area shape="rect" coords="466,471,493,501" href="#" alt="Gazebo" title="Gazebo"
-				  onmouseover="showInfo('Gazebo: ','gazebo.png'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 15: Gazebo.\n\nA cozy spot for relaxation, study, and social gatherings.','gazebo.png'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--17-->
 			<area shape="rect" coords="559,563,584,595" href="#" alt="Oval" title="Oval"
-				  onmouseover="showInfo('Oval: ','oval.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 17: Oval.\n\nA multi-purpose track and field area for sports, training, and university events. ','oval.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--18-->
 				<area shape="rect" coords="523,672,552,695" href="#" alt="Tahanan ng Atleta" title="Tahanan ng Atleta"
-				onmouseover="showInfo('Tahanan ng Atleta: ','tahanan-ng-atleta.jpg'); highlightArea(this);" 
+				onmouseover="showInfo('Area 18: Tahanan ng Atleta.\n\n dedicated facility for student-athletes, providing space for training and development.','tahanan-ng-atleta.jpg'); highlightArea(this);" 
 				onmouseout="hideInfo(); removeHighlight(this);">
 			<!--30-->
 			<area shape="rect" coords="764,255,787,285" href="#" alt="Ninoy Aquino Learning Resource Center" title="Ninoy Aquino Learning Resource Center"
-				  onmouseover="showInfo('Ninoy Aquino Learning Resource Center: ','ninoy.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 30: Ninoy Aquino Learning Resource Center.\n\nA center for research and study, offering academic resources and learning facilities.','ninoy.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--37-->
 			<area shape="rect" coords="956,349,972,383" href="#" alt="Swimming Pool" title="Swimming Pool"
-				  onmouseover="showInfo('Swimming Pool ','pool.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 37: Swimming Pool.\n\nA facility for aquatic training, competitions, and recreational activities. ','pool.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--38-->
 			<area shape="rect" coords="1106,379,1131,401" href="#" alt="Multi-Purpose Building" title="Multi-Purpose Building"
-				  onmouseover="showInfo('Multi-Purpose Building ','multi-purpose.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 38: Multi-Purpose Building.\n\nHosts various academic, athletic, and institutional events. ','multi-purpose.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--39-->
 			<area shape="rect" coords="1200,460,1220,489" href="#" alt="Engineering and Science Research Center" title="Engineering and Science Research Center"
-				  onmouseover="showInfo('Engineering and Science Research Center: ','engineering-research.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 39: Engineering and Science Research Center.\n\nFosters innovation and research in engineering and scientific fields. ','engineering-research.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--42-->
 			<area shape="rect" coords="1090,104,1115,123" href="#" alt="Engineering and Architecture Building" title="Engineering and Architecture Building"
-				  onmouseover="showInfo('Engineering and Architecture Building','cea.jpg'); highlightArea(this);" 
+				  onmouseover="showInfo('Area 42: Engineering and Architecture Building.\n\nProvides classrooms, laboratories, and workspaces for engineering and architecture students.','cea.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			
 			<!-- Add more areas based on the map coordinates -->
