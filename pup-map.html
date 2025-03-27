@@ -14,14 +14,15 @@
 			#info-box {
 				position: absolute;
 				right: 10px;
-				bottom: 0px;
+				bottom: 4px;
 				background-color: white;
 				padding: 10px;
 				border: 3px solid black;
 				display: none;
-				width: 19vw;
+				width: 18vw;
 				height:32vh;
 			}
+
 		</style>
 	</head>
 	<body style="overflow-y: hidden; overflow-x: hidden;">
@@ -32,69 +33,70 @@
 
 		<map name="pup-map">
 			<!--1/-->
-			<area shape="rect" coords="1083,566,1106,598" href="#" alt="PUP Pylon" title="PUP Pylon" id = ""
-				  onmouseover="showInfo('Area 1: The Pylon originally stood for the true, the good and the beautiful.'); highlightArea(this);" 
-				  onmouseout="hideInfo(); removeHighlight(this);">
+			<area shape="rect" coords="1083,566,1106,598" href="#" alt="PUP Pylon" title="PUP Pylon" 
+				  onmouseover="showInfo('Area 1: The Pylon originally stood for the true, the good and the beautiful.', 'pylon.jpg') ;highlightArea(this);" 
+				  onmouseout="hideInfo(); hideImage(); removeHighlight(this);">
 			<!--2-->
 			<area shape="rect" coords="1015,585,1038,612" href="#" alt="The Mural" title="The Mural"
-				  onmouseover="showInfo('The Mural: The Mural. The sculpture (Cut and welded brass mural relief, 2.5 x 9.3 meters) was built by national artist Eduardo Castrillo † in 1974. '); highlightArea(this);" 
+				  onmouseover="showInfo('The Mural: The Mural. The sculpture (Cut and welded brass mural relief, 2.5 x 9.3 meters) was built by national artist Eduardo Castrillo † in 1974. ', 'mural.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
-			<!--3-->
-			<area shape="rect" coords="1020,522,1059,554" href="#" alt="Vistor's Lounge" title="Vistor's Lounge"
-				  onmouseover="showInfo('Visitor\'s Lounge'); highlightArea(this);" 
-				  onmouseout="hideInfo(); removeHighlight(this);">
-			<!--4-->
-			<area shape="rect" coords="1078,507,1096,526" href="#" alt="Open Court" title="Open Court"
-				  onmouseover="showInfo('Open Court'); highlightArea(this);" 
-				  onmouseout="hideInfo(); removeHighlight(this);">
-			<!--5-->
+						<!--5-->
 			<area shape="rect" coords="991,459,1007,481" href="#" alt="Lawn Tennis Court" title="Lawn Tennis Court"
-				  onmouseover="showInfo('Lawn Tennis Court'); highlightArea(this);" 
-				  onmouseout="hideInfo(); removeHighlight(this);">
-			<!--6-->
-			<area shape="rect" coords="902,398,918,427" href="#" alt="Basketball Court" title="Basketball Court"
-				  onmouseover="showInfo('Basketball Court'); highlightArea(this);" 
+				  onmouseover="showInfo('Lawn Tennis Court', 'open-court.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--7-->
 			<area shape="rect" coords="798,459,807,485" href="#" alt="Souvenir Shop" title="Souvenir Shop"
-				  onmouseover="showInfo('Souvenir Shop'); highlightArea(this);" 
+				  onmouseover="showInfo('Souvenir Shop','souvenir-shop.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--8-->
 			<area shape="rect" coords="709,416,720,444" href="#" alt="Mabini Shrine" title="Mabini Shrine"
-				  onmouseover="showInfo('Mabini Shrine: '); highlightArea(this);" 
+				  onmouseover="showInfo('Mabini Shrine: ', 'mabini-shrine.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--9-->
 			<area shape="rect" coords="640,415,650,454" href="#" alt="Mabini Museum" title="Mabini Museum"
-				  onmouseover="showInfo('Mabini Museum: '); highlightArea(this);" 
+				  onmouseover="showInfo('Mabini Museum: ', 'museo-mabini.png'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--10-->
 			<area shape="rect" coords="744,374,755,400" href="#" alt="Obelisk" title="Obelisk"
-				  onmouseover="showInfo('Obelisk'); highlightArea(this);" 
+				  onmouseover="showInfo('Obelisk','obelisk.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--11-->
 			<area shape="rect" coords="587,400,596,426" href="#" alt="Freedom Park" title="Freedom Park"
-				  onmouseover="showInfo('Freedom Park: '); highlightArea(this);" 
+				  onmouseover="showInfo('Freedom Park: ', 'freedom park.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--12-->
 			<area shape="rect" coords="490,431,505,459" href="#" alt="Fountain Park" title="Fountain Park"
-				  onmouseover="showInfo('Fountain Park: '); highlightArea(this);" 
+				  onmouseover="showInfo('Fountain Park: ', 'fountain-park.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--13-->
 			<area shape="rect" coords="316,441,333,463" href="#" alt="Inter-Faith Chapel" title="Inter-Faith Chapel"
-				  onmouseover="showInfo('Inter-Faith Chapel'); highlightArea(this);" 
+				  onmouseover="showInfo('Inter-Faith Chapel', 'inter-faith-chapel.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--14-->
 			<area shape="rect" coords="333,301,344,327" href="#" alt="Main Academic Building" title="Main Academic Building"
-				  onmouseover="showInfo('Main Academic Building'); highlightArea(this);" 
+				  onmouseover="showInfo('Main Academic Building', 'main-acad-building.jpg'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--15-->
 			<area shape="rect" coords="77,362,99,394" href="#" alt="Gazebo" title="Gazebo"
-				  onmouseover="showInfo('Gazebo: '); highlightArea(this);" 
+				  onmouseover="showInfo('Gazebo: ', 'gazebo.png'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
 			<!--15-->
 			<area shape="rect" coords="466,471,493,501" href="#" alt="Gazebo" title="Gazebo"
-				  onmouseover="showInfo('Gazebo: '); highlightArea(this);" 
+				  onmouseover="showInfo('Gazebo: ','gazebo.png'); highlightArea(this);" 
 				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--17-->
+			<area shape="rect" coords="559,563,584,595" href="#" alt="Oval" title="Oval"
+				  onmouseover="showInfo('Oval: ','oval.jpg'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			<!--18-->
+				<area shape="rect" coords="523,672,552,695" href="#" alt="Tahanan ng Atleta" title="Tahanan ng Atleta"
+				onmouseover="showInfo('Tahanan ng Atleta: ','tahanan-ng-atleta.jpg'); highlightArea(this);" 
+				onmouseout="hideInfo(); removeHighlight(this);">
+			<!--15-->
+			<area shape="rect" coords="466,471,493,501" href="#" alt="Gazebo" title="Gazebo"
+				  onmouseover="showInfo('Gazebo: ','gazebo.png'); highlightArea(this);" 
+				  onmouseout="hideInfo(); removeHighlight(this);">
+			
 			
 			
 			<!-- Add more areas based on the map coordinates -->
@@ -105,10 +107,27 @@
 
 		<script>
 			// Show information when hovering over an area
-			function showInfo(text) {
+			function showInfo(text, imgSrc) {
 				const infoBox = document.getElementById('info-box');
 				infoBox.style.display = 'block';
-				infoBox.innerHTML = text;
+
+				// Clear previous content
+				infoBox.innerHTML = "";
+
+				// Create and append the image
+				if (imgSrc) {
+					const img = document.createElement("img");
+					img.src = imgSrc;
+					img.style.width = "17.9vw";
+					img.style.height = "18vh";
+					img.style.display = "block";
+					infoBox.appendChild(img);
+				}
+
+				// Append text
+				const textNode = document.createElement("p");
+				textNode.textContent = text;
+				infoBox.appendChild(textNode);
 			}
 
 			// Hide the information when the mouse leaves
@@ -126,6 +145,19 @@
 			function removeHighlight(area) {
 				area.classList.remove('highlight');
 			}
+
+			//Show image when mouse is hovered
+			//function showImage(event, imgSrc) {
+				//var img = document.getElementById("info-image");
+				//	img.src = imgSrc;
+					//img.style.left = event.pageX + "px";
+					//img.style.top = event.pageY + "px";
+					//img.style.display = "block";
+				//}
+
+				function hideImage() {
+					document.getElementById("info-image").style.display = "none";
+				}
 			
 			//added
 			function scaleImageMap() {
